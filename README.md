@@ -89,14 +89,15 @@
    $ flutter run
 ```
 
-### Instructions 📋:
-#### OCR App 📱
+## Instructions 📋:
+### OCR App 📱
 * There are two ways to use the OCR App:
 * Tap the camera icon -> take a photo of the target -> tap convert
 * Tap the file icon -> choose photo from the gallery -> tap convert
 * If you wish to add the text/photo to the Firebase:
 * Tap push to database to store the image/text in cloud.
-#### Web App 💻
+
+### Web App 💻
 * Initially register yourself in the Web App.
 * Login using your registered credentials.
 * Navigate to any of the pages using the Navigation bar in the left.
@@ -106,7 +107,8 @@
 * Click the button fire notification to send notification to the target group.
 * You can also view the details of each patient / drug / your profile by clicking the respective links.
 * Logout tab logs you out of the application.
-#### Patients App 📱
+
+### Patients App 📱
 * Just opening the app will fetch you all the messages from the Hospital side.
 
 
