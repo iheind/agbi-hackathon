@@ -6,6 +6,7 @@
 
 ### Our Solution 👨‍💻:
 <img src="https://github.com/Sai-Adarsh/agbi-hackathon/blob/main/diagnosis-tagging/app/base/static/assets/img/icon.png" width="30%">
+
 * Mehta's Digital Marketing [Webapp](https://github.com/Sai-Adarsh/agbi-hackathon/tree/main/diagnosis-tagging)
 * Mehta's OCRApp
 * Mehta's PatientsApp
