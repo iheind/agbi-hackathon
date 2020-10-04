@@ -53,12 +53,22 @@
 ```sh
    $ pip install -r requirements.txt
 ```
-### How to run 💡:
+* ### How to run 💡:
 * Run the webapp locally
 ```sh
    $ python run.py
 ```
 * Now, the application runs in [localhost](http://127.0.0.1:5000/)
+* ## OCR App
+```sh
+   $ cd agbi-hackathon/ocrapp
+```
+```sh
+   $ yarn
+```
+```sh
+   $ yarn start
+```
 
 ### Authors 📋:
 <p> Made with ❤</p>
