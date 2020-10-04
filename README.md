@@ -69,6 +69,13 @@
 ```sh
    $ yarn start
 ```
+* ## Patients App
+```sh
+   $ cd agbi-hackathon/patients-sms-app
+```
+```sh
+   $ flutter run
+```
 
 ### Authors 📋:
 <p> Made with ❤</p>
