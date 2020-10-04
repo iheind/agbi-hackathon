@@ -1,16 +1,31 @@
-# notification
+## Patients App 📱
 
-A new Flutter application.
+## Demo 📱
+* Click [here](https://github.com/Sai-Adarsh/agbi-hackathon/blob/main/patients-sms-app/android/app/patients-sms-app.apk) for demo
 
-## Getting Started
+## Description ✔️:
+* A Cross Platform Mobile Application that catches the messages from the Hospital and displays them at one place and helps interact with the hospital.
 
-This project is a starting point for a Flutter application.
+## Instructions 📋:
+### Patients App 📱
+* Just opening the app will fetch you all the messages from the Hospital side.
 
-A few resources to get you started if this is your first Flutter project:
+### Installation 📦:
+* ## Patients App
+```sh
+   $ cd agbi-hackathon/patients-sms-app
+```
+```sh
+   $ flutter run
+```
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+### Authors 📋:
+<p> Made with ❤</p>
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+* Sai Adarsh
+* Rajasekar
+* LS Meenatchi
+
+[<img src="https://image.flaticon.com/icons/svg/185/185961.svg" width="35" padding="10">](https://twitter.com/ad6rsh)
+[<img src="https://image.flaticon.com/icons/svg/185/185964.svg" width="35" padding="10">](https://www.linkedin.com/in/sai-adarsh/)
+[<img src="https://image.flaticon.com/icons/svg/185/185981.svg" width="35" padding="10">](https://www.facebook.com/saiadarsh99)
