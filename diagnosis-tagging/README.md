@@ -1,6 +1,9 @@
 ## Diagnosis Tagging for Digital Marketing 💻
 <img src="https://github.com/Sai-Adarsh/agbi-hackathon/blob/main/diagnosis-tagging/app/base/static/assets/img/icon.png" width="30%">
 
+## Demo 💻:
+* Click [here](https://agbihackathon.herokuapp.com/) for demo
+
 ## Description ✔️:
 * A Web Application that stores the data of the patients and drug at one place and performs data visualization and targeted marketing with them.
 
