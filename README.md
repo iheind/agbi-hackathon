@@ -5,10 +5,17 @@
 #### Diagnosis Tagging for Digital Marketing
 * Currently, hospitals rely on mass marketing campaigns to inform patients of a relevant treatment or drug available to further improve their health. Build applications that can help hospitals, patients, pharmaceutical companies, and health R&D companies with more efficient and effective ways of communication by hospitals for better health outcomes and targeted communication to prime patient groups for a new treatment/drug leveraging the power of data analytics. Your solution needs to manage the database of patient records and discharge summaries to identify patients who are good candidates for newly launched medicines, treatments etc.
 
+
+
 #### Our Solution
-* Mehta's Digital Marketing Webapp
+* Mehta's Digital Marketing [Webapp](https://github.com/Sai-Adarsh/agbi-hackathon/tree/main/diagnosis-tagging)
 * Mehta's OCRApp
-* Mehta's MyDrugsApp
+* Mehta's PatientsApp
+
+#### Demo url
+* Mehta's Digital Marketing [Webapp](https://agbihackathon.herokuapp.com/)
+* Mehta's OCRApp
+* Mehta's PatientsApp
 
 #### Architecture
 
