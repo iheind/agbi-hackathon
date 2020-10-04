@@ -1,22 +1,40 @@
-# Firebase Storage Upload Example
+# OCR App 📱
 
-<p>
-  <!-- iOS -->
-  <img alt="Supports Expo iOS" longdesc="Supports Expo iOS" src="https://img.shields.io/badge/iOS-4630EB.svg?style=flat-square&logo=APPLE&labelColor=999999&logoColor=fff" />
-  <!-- Android -->
-  <img alt="Supports Expo Android" longdesc="Supports Expo Android" src="https://img.shields.io/badge/Android-4630EB.svg?style=flat-square&logo=ANDROID&labelColor=A4C639&logoColor=fff" />
-</p>
+<img src="https://github.com/Sai-Adarsh/agbi-hackathon/blob/main/ocrapp/assets/icon.png" width="15%">
 
-This example demonstrates how you can upload images (and other files) to Firebase Storage. Read App.js for more info, in particular the `uploadImageAsync` function.
+## Description
+* A Cross Platform OCR Mobile Application that converts printed or handwritten text into digital text and automatically uploads to database
 
-## 🚀 How to use
+## Demo:
+* Click [here](https://expo.io/@saiadarsh99/mehta-ocr) for demo
 
-- Run `yarn` or `npm install`
-- Run [`expo start`](https://docs.expo.io/versions/latest/workflow/expo-cli/), try it out.
-- Take a new picture or upload one from your library
-- See the image being rendered from Firebase
+## Instructions 📋:
+### OCR App 📱
+* There are two ways to use the OCR App:
+* Tap the camera icon -> take a photo of the target -> tap convert
+* Tap the file icon -> choose photo from the gallery -> tap convert
+* If you wish to add the text/photo to the Firebase:
+* Tap push to database to store the image/text in cloud.
 
-## 📝 Notes
+### Installation 📦:
+* ## OCR App
+```sh
+   $ cd agbi-hackathon/ocrapp
+```
+```sh
+   $ yarn
+```
+```sh
+   $ yarn start
+```
 
-- [Firebase Storage API](https://firebase.google.com/docs/storage/web/upload-files)
-- [Expo Firebase guide](https://docs.expo.io/versions/latest/guides/using-firebase/)
+### Authors 📋:
+<p> Made with ❤</p>
+
+* Sai Adarsh
+* Rajasekar
+* LS Meenatchi
+
+[<img src="https://image.flaticon.com/icons/svg/185/185961.svg" width="35" padding="10">](https://twitter.com/ad6rsh)
+[<img src="https://image.flaticon.com/icons/svg/185/185964.svg" width="35" padding="10">](https://www.linkedin.com/in/sai-adarsh/)
+[<img src="https://image.flaticon.com/icons/svg/185/185981.svg" width="35" padding="10">](https://www.facebook.com/saiadarsh99)
