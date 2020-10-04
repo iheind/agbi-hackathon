@@ -1,309 +1,64 @@
-# [Flask Dashboard - Black Design](https://appseed.us/admin-dashboards/flask-dashboard-black)
+## Diagnosis Tagging for Digital Marketing 💻
+<img src="https://github.com/Sai-Adarsh/agbi-hackathon/blob/main/diagnosis-tagging/app/base/static/assets/img/icon.png" width="30%">
 
-> Open-Source admin dashboard coded in **Flask Framework** by **AppSeed** [Web App Generator](https://appseed.us/app-generator) - Features
+## Description ✔️:
+* A Web Application that stores the data of the patients and drug at one place and performs data visualization and targeted marketing with them.
 
-- UI Kit: **Black Dashboard** (Free version) provided by **Creative-Tim**
-- DBMS: SQLite, PostgreSQL (production) 
-- DB Tools: SQLAlchemy ORM, Alembic (schema migrations)
-- Modular design with **Blueprints**
-- Session-Based authentication (via **flask_login**), Forms validation
-- Deployment scripts: Docker, Gunicorn / Nginx, Heroku
-- Support via **Github** and [Discord](https://discord.gg/fZC6hup).
+## Instructions 📋:
+### Web App 💻
+* Initially register yourself in the Web App.
+* Login using your registered credentials.
+* Navigate to any of the pages using the Navigation bar in the left.
+* Click the buttons 'add drug details', 'add patient details' in the respective tabs to add their details to the firebase.
+* Use the text box below the table headers to search/filter the drug/patient details accordingly.
+* Use the Send Notification tab to generate a list of patients taking a particular medication by clicking the generate button beside their details.
+* Click the button fire notification to send notification to the target group.
+* You can also view the details of each patient / drug / your profile by clicking the respective links.
+* Logout tab logs you out of the application.
 
-<br />
-
-> Links
-
-- [Flask Dashboard Black](https://appseed.us/boilerplate-code/flask-dashboard) - product page
-- [Flask Dashboard Black - Demo](https://flask-dashboard-black.appseed.us/) - LIVE App deployment
-- [Flask Dashboard Black - Docs](https://docs.appseed.us/admin-dashboards/flask-dashboard-black/) - App Documentation
-
-<br />
-
-## Want more? Go PRO!
-
-PRO versions include **Premium UI Kits**, Lifetime updates and **24/7 LIVE Support** (via [Discord](https://discord.gg/fZC6hup))
-
-| [Flask DattaAble PRO](https://appseed.us/admin-dashboards/flask-dashboard-dattaable-pro) | [Flask Dashboard Black PRO](https://appseed.us/admin-dashboards/flask-dashboard-black-pro) | [Flask Dashboard Argon PRO](https://appseed.us/admin-dashboards/flask-dashboard-argon-pro) |
-| --- | --- | --- |
-| [![Flask DattaAble PRO](https://raw.githubusercontent.com/app-generator/flask-dashboard-dattaable-pro/master/media/flask-dashboard-dattaable-pro-screen.png)](https://appseed.us/admin-dashboards/flask-dashboard-dattaable-pro) | [![Flask Dashboard Black PRO](https://raw.githubusercontent.com/app-generator/flask-dashboard-black-pro/master/media/flask-dashboard-black-pro-screen.png)](https://appseed.us/admin-dashboards/flask-dashboard-black-pro) | [![Flask Dashboard Argon PRO](https://raw.githubusercontent.com/app-generator/flask-dashboard-argon-pro/master/media/flask-dashboard-argon-pro-screen.png)](https://appseed.us/admin-dashboards/flask-dashboard-argon-pro)
-
-<br />
-<br />
-
-![Flask Dashboard - Black Design, dashboard screen.](https://raw.githubusercontent.com/app-generator/flask-black-dashboard/master/media/flask-black-dashboard-screen.png)
-
-<br />
-
-## How to use it
-
-```bash
-$ # Get the code
-$ git clone https://github.com/app-generator/flask-black-dashboard.git
-$ cd flask-black-dashboard
-$
-$ # Virtualenv modules installation (Unix based systems)
-$ virtualenv env
-$ source env/bin/activate
-$
-$ # Virtualenv modules installation (Windows based systems)
-$ # virtualenv env
-$ # .\env\Scripts\activate
-$
-$ # Install modules - SQLite Database
-$ pip3 install -r requirements.txt
-$
-$ # OR with PostgreSQL connector
-$ # pip install -r requirements-pgsql.txt
-$
-$ # Set the FLASK_APP environment variable
-$ (Unix/Mac) export FLASK_APP=run.py
-$ (Windows) set FLASK_APP=run.py
-$ (Powershell) $env:FLASK_APP = ".\run.py"
-$
-$ # Set up the DEBUG environment
-$ # (Unix/Mac) export FLASK_ENV=development
-$ # (Windows) set FLASK_ENV=development
-$ # (Powershell) $env:FLASK_ENV = "development"
-$
-$ # Start the application (development mode)
-$ # --host=0.0.0.0 - expose the app on all network interfaces (default 127.0.0.1)
-$ # --port=5000    - specify the app port (default 5000)  
-$ flask run --host=0.0.0.0 --port=5000
-$
-$ # Access the dashboard in browser: http://127.0.0.1:5000/
+### Installation 📦:
+* ## Digital Marketing Webapp
+* Clone the repo
+```sh
+   $ git clone https://github.com/Sai-Adarsh/agbi-hackathon
 ```
-
-> Note: To use the app, please access the registration page and create a new user. After authentication, the app will unlock the private pages.
-
-<br />
-
-## Code-base structure
-
-The project is coded using blueprints, app factory pattern, dual configuration profile (development and production) and an intuitive structure presented bellow:
-
-> Simplified version
-
-```bash
-< PROJECT ROOT >
-   |
-   |-- app/                      # Implements app logic
-   |    |-- base/                # Base Blueprint - handles the authentication
-   |    |-- home/                # Home Blueprint - serve UI Kit pages
-   |    |
-   |   __init__.py               # Initialize the app
-   |
-   |-- requirements.txt          # Development modules - SQLite storage
-   |-- requirements-mysql.txt    # Production modules  - Mysql DMBS
-   |-- requirements-pqsql.txt    # Production modules  - PostgreSql DMBS
-   |
-   |-- .env                      # Inject Configuration via Environment
-   |-- config.py                 # Set up the app
-   |-- run.py                    # Start the app - WSGI gateway
-   |
-   |-- ************************************************************************
+```sh
+   $ cd agbi-hackathon/diagnosis-tagging
 ```
-
-<br />
-
-> The bootstrap flow
-
-- `run.py` loads the `.env` file
-- Initialize the app using the specified profile: *Debug* or *Production*
-  - If env.DEBUG is set to *True* the SQLite storage is used
-  - If env.DEBUG is set to *False* the specified DB driver is used (MySql, PostgreSQL)
-- Call the app factory method `create_app` defined in app/__init__.py
-- Redirect the guest users to Login page
-- Unlock the pages served by *home* blueprint for authenticated users
-
-<br />
-
-> App / Base Blueprint
-
-The *Base* blueprint handles the authentication (routes and forms) and assets management. The structure is presented below:
-
-```bash
-< PROJECT ROOT >
-   |
-   |-- app/
-   |    |-- home/                                # Home Blueprint - serve app pages (private area)
-   |    |-- base/                                # Base Blueprint - handles the authentication
-   |         |-- static/
-   |         |    |-- <css, JS, images>          # CSS files, Javascripts files
-   |         |
-   |         |-- templates/                      # Templates used to render pages
-   |              |
-   |              |-- includes/                  #
-   |              |    |-- navigation.html       # Top menu component
-   |              |    |-- sidebar.html          # Sidebar component
-   |              |    |-- footer.html           # App Footer
-   |              |    |-- scripts.html          # Scripts common to all pages
-   |              |
-   |              |-- layouts/                   # Master pages
-   |              |    |-- base-fullscreen.html  # Used by Authentication pages
-   |              |    |-- base.html             # Used by common pages
-   |              |
-   |              |-- accounts/                  # Authentication pages
-   |                   |-- login.html            # Login page
-   |                   |-- register.html         # Registration page
-   |
-   |-- requirements.txt                          # Development modules - SQLite storage
-   |-- requirements-mysql.txt                    # Production modules  - Mysql DMBS
-   |-- requirements-pqsql.txt                    # Production modules  - PostgreSql DMBS
-   |
-   |-- .env                                      # Inject Configuration via Environment
-   |-- config.py                                 # Set up the app
-   |-- run.py                                    # Start the app - WSGI gateway
-   |
-   |-- ************************************************************************
+* Create virtualenv
+```sh
+   $ virtualenv venv
 ```
-
-<br />
-
-> App / Home Blueprint
-
-The *Home* blueprint handles UI Kit pages for authenticated users. This is the private zone of the app - the structure is presented below:
-
-```bash
-< PROJECT ROOT >
-   |
-   |-- app/
-   |    |-- base/                     # Base Blueprint - handles the authentication
-   |    |-- home/                     # Home Blueprint - serve app pages (private area)
-   |         |
-   |         |-- templates/           # UI Kit Pages
-   |              |
-   |              |-- index.html      # Default page
-   |              |-- page-404.html   # Error 404 - mandatory page
-   |              |-- page-500.html   # Error 500 - mandatory page
-   |              |-- page-403.html   # Error 403 - mandatory page
-   |              |-- *.html          # All other HTML pages
-   |
-   |-- requirements.txt               # Development modules - SQLite storage
-   |-- requirements-mysql.txt         # Production modules  - Mysql DMBS
-   |-- requirements-pqsql.txt         # Production modules  - PostgreSql DMBS
-   |
-   |-- .env                           # Inject Configuration via Environment
-   |-- config.py                      # Set up the app
-   |-- run.py                         # Start the app - WSGI gateway
-   |
-   |-- ************************************************************************
+* For Linux
+```sh
+   $ source ./venv/bin/activate
 ```
-
-<br />
-
-## Deployment
-
-The app is provided with a basic configuration to be executed in [Docker](https://www.docker.com/), [Heroku](https://www.heroku.com/), [Gunicorn](https://gunicorn.org/), and [Waitress](https://docs.pylonsproject.org/projects/waitress/en/stable/).
-
-<br />
-
-### [Docker](https://www.docker.com/) execution
----
-
-The application can be easily executed in a docker container. The steps:
-
-> Get the code
-
-```bash
-$ git clone https://github.com/app-generator/flask-black-dashboard.git
-$ cd flask-black-dashboard
+* For windows
+```sh
+   $ cd venv/Scripts/
 ```
-
-> Start the app in Docker
-
-```bash
-$ sudo docker-compose pull && sudo docker-compose build && sudo docker-compose up -d
+```sh
+   $ activate
 ```
-
-Visit `http://localhost:5005` in your browser. The app should be up & running.
-
-<br />
-
-### [Heroku](https://www.heroku.com/)
----
-
-Steps to deploy on **Heroku**
-
-- [Create a FREE account](https://signup.heroku.com/) on Heroku platform
-- [Install the Heroku CLI](https://devcenter.heroku.com/articles/getting-started-with-python#set-up) that match your OS: Mac, Unix or Windows
-- Open a terminal window and authenticate via `heroku login` command
-- Clone the sources and push the project for LIVE deployment
-
-```bash
-$ # Clone the source code:
-$ git clone https://github.com/app-generator/flask-black-dashboard.git
-$ cd flask-black-dashboard
-$
-$ # Check Heroku CLI is installed
-$ heroku -v
-heroku/7.25.0 win32-x64 node-v12.13.0 # <-- All good
-$
-$ # Check Heroku CLI is installed
-$ heroku login
-$ # this commaond will open a browser window - click the login button (in browser)
-$
-$ # Create the Heroku project
-$ heroku create
-$
-$ # Trigger the LIVE deploy
-$ git push heroku master
-$
-$ # Open the LIVE app in browser
-$ heroku open
+* Install dependencies
+```sh
+   $ pip install -r requirements.txt
 ```
-
-<br />
-
-### [Gunicorn](https://gunicorn.org/)
----
-
-Gunicorn 'Green Unicorn' is a Python WSGI HTTP Server for UNIX.
-
-> Install using pip
-
-```bash
-$ pip install gunicorn
+* ### How to run 💡:
+* Run the webapp locally
+```sh
+   $ python run.py
 ```
-> Start the app using gunicorn binary
+* Now, the application runs in [localhost](http://127.0.0.1:5000/)
 
-```bash
-$ gunicorn --bind 0.0.0.0:8001 run:app
-Serving on http://localhost:8001
-```
 
-Visit `http://localhost:8001` in your browser. The app should be up & running.
+### Authors 📋:
+<p> Made with ❤</p>
 
-<br />
+* Sai Adarsh
+* Rajasekar
+* LS Meenatchi
 
-### [Waitress](https://docs.pylonsproject.org/projects/waitress/en/stable/)
----
-
-Waitress (Gunicorn equivalent for Windows) is meant to be a production-quality pure-Python WSGI server with very acceptable performance. It has no dependencies except ones that live in the Python standard library.
-
-> Install using pip
-
-```bash
-$ pip install waitress
-```
-> Start the app using [waitress-serve](https://docs.pylonsproject.org/projects/waitress/en/stable/runner.html)
-
-```bash
-$ waitress-serve --port=8001 run:app
-Serving on http://localhost:8001
-```
-
-Visit `http://localhost:8001` in your browser. The app should be up & running.
-
-<br />
-
-## Credits & Links
-
-- [Flask Framework](https://www.palletsprojects.com/p/flask/) - The offcial website
-- [Boilerplate Code](https://appseed.us/boilerplate-code) - Index provided by **AppSeed**
-- [Boilerplate Code](https://github.com/app-generator/boilerplate-code) - Index published on Github
-
-<br />
-
----
-[Flask Dashboard - Black Design](https://appseed.us/admin-dashboar - Provided by **AppSeed** [Web App Generator](https://appseed.us/app-generator).
+[<img src="https://image.flaticon.com/icons/svg/185/185961.svg" width="35" padding="10">](https://twitter.com/ad6rsh)
+[<img src="https://image.flaticon.com/icons/svg/185/185964.svg" width="35" padding="10">](https://www.linkedin.com/in/sai-adarsh/)
+[<img src="https://image.flaticon.com/icons/svg/185/185981.svg" width="35" padding="10">](https://www.facebook.com/saiadarsh99)
