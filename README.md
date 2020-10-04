@@ -12,9 +12,9 @@
 * Mehta's OCRApp
 * Mehta's PatientsApp
 
-#### Demo url
+#### Demo URL
 * Mehta's Digital Marketing [Webapp](https://agbihackathon.herokuapp.com/)
-* Mehta's OCRApp
+* Mehta's OCRApp [APK](https://github.com/Sai-Adarsh/agbi-hackathon/raw/main/ocrapp/build/mehtaocrapp.apk), [Snack](https://expo.io/@saiadarsh99/mehta-ocr)
 * Mehta's PatientsApp
 
 #### Architecture
@@ -59,7 +59,12 @@
 #### How to run
 
 #### Authors
+<p align="center"> Made with ❤</p>
+
 * Sai Adarsh
 * Rajasekar
 * LS Meenatchi
 
+[<img src="https://image.flaticon.com/icons/svg/185/185961.svg" width="35" padding="10">](https://twitter.com/ad6rsh)
+[<img src="https://image.flaticon.com/icons/svg/185/185964.svg" width="35" padding="10">](https://www.linkedin.com/feed/)
+[<img src="https://image.flaticon.com/icons/svg/185/185981.svg" width="35" padding="10">](https://www.facebook.com/saiadarsh99)
