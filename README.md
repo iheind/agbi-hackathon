@@ -18,14 +18,14 @@
 * #### Digital Marketing Webapp
 * Clone the repo
 ```sh
-$ git clone https://github.com/Sai-Adarsh/agbi-hackathon
+   $ git clone https://github.com/Sai-Adarsh/agbi-hackathon
 ```
 ```sh
-$ cd agbi-hackathon/diagnosis-tagging
+   $ cd agbi-hackathon/diagnosis-tagging
 ```
 * Create virtualenv
 ```sh
-$ virtualenv venv
+   $ virtualenv venv
 ```
 * For Linux
 ```sh
@@ -40,11 +40,11 @@ $ virtualenv venv
 ```
 * Install dependencies
 ```sh
-$ pip install -r requirements.txt
+   $ pip install -r requirements.txt
 ```
 * Run the webapp locally
 ```sh
-$ python run.py
+   $ python run.py
 ```
 * Now, the application runs in [localhost](http://127.0.0.1:5000/)
 
