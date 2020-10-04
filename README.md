@@ -3,6 +3,8 @@
 ![forthebadge](https://forthebadge.com/images/badges/made-with-javascript.svg)
 ![forthebadge](https://forthebadge.com/images/badges/made-with-python.svg)
 
+<img src="https://media-fastly.hackerearth.com/media/hackathon/agbi-digital-healthtech-grand-challenge/images/4e1412d2d7-great_lakes_he_cover-01-01-01-01-01-01-01-01.png" width="100%">
+
 ### Problem Statement 🤔:
 * ### Diagnosis Tagging for Digital Marketing:
 * Currently, hospitals rely on mass marketing campaigns to inform patients of a relevant treatment or drug available to further improve their health. Build applications that can help hospitals, patients, pharmaceutical companies, and health R&D companies with more efficient and effective ways of communication by hospitals for better health outcomes and targeted communication to prime patient groups for a new treatment/drug leveraging the power of data analytics. Your solution needs to manage the database of patient records and discharge summaries to identify patients who are good candidates for newly launched medicines, treatments etc.
