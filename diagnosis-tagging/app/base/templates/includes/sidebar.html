@@ -1,0 +1,105 @@
+
+
+    <div class="sidebar">
+      <div class="sidebar-wrapper">
+        <div class="logo">
+          <!-- <a target="_blank" rel="sponsored noopener noreferrer"
+             href="https://appseed.us/admin-dashboards/flask-dashboard-black" class="simple-text logo-mini">
+            PI
+          </a> -->
+          <center>
+          <a href="/index" class="logo-normal">
+            <img src="/static/assets/img/icon.png" height="50" alt="">
+          </a>
+          </center>
+        </div>
+
+        <ul class="nav">
+          {% if current_user.is_authenticated %}
+          <li class="{% if 'index' in segment %} active {% endif %}">
+            <a href="/">
+              <!--<i class="tim-icons icon-chart-pie-36"></i>-->
+              <center>
+                <p> <font size = "6">🚀</font><font size = "2"> Dashboard</font></p>
+              </center>
+            </a>
+          </li>
+          <li class="{% if 'send_notification' in segment %} active {% endif %}">
+            <a href="/send_notification">
+              <!--<i class="tim-icons icon-bell-55"></i>-->
+              <center>
+                <p> <font size = "6">🤖</font><font size = "2">  Send notifications</font></p>
+              </center>
+            </a>
+          </li>
+          <!--
+          <li class="{% if 'icons' in segment %} active {% endif %}">
+            <a href="/forms">
+              <i class="tim-icons icon-paper"></i>
+              <p>Forms</p>
+            </a>
+          </li>-->
+          <li class="{% if 'drugs_list' in segment %} active {% endif %}">
+            <a href="/drugs_list">
+              <!--<i class="tim-icons icon-badge"></i>-->
+              <center>
+                  <p> <font size = "6">💊</font><font size = "2">  Drug's List</font></p>
+              </center>
+            </a>
+          </li>
+          <li class="{% if 'patients_list' in segment %} active {% endif %}">
+            <a href="/patients_list">
+              <!--<i class="tim-icons icon-badge"></i>-->
+              <center>
+                <p> <font size = "6">💼</font><font size = "2">  Patient's List</font></p>
+              </center>
+            </a>
+          </li>
+          <li class="{% if 'notifications' in segment %} active {% endif %}">
+            <a href="/ui-notifications.html">
+              <!--<i class="tim-icons icon-bell-55"></i>-->
+              <center>
+                <p> <font size = "6">🔔</font><font size = "2">  Notifications</font></p>
+              </center>
+            </a>
+          </li>
+          <li class="{% if 'page-user' in segment %} active {% endif %}">
+            <a href="/page-user.html">
+                <!--<i class="tim-icons icon-single-02"></i>-->
+              <center>
+                <p> <font size = "6">🤵</font><font size = "2">  User profile</font></p>
+              </center>
+            </a>
+          </li>
+          <!--
+          <li class="{% if 'typography' in segment %} active {% endif %}">
+            <a href="/ui-typography.html">
+              <i class="tim-icons icon-align-center"></i>
+              <p>Typography</p>
+            </a>
+          </li>
+          <li class="{% if 'rtl-support' in segment %} active {% endif %}">
+            <a href="/page-rtl-support.html">
+              <i class="tim-icons icon-world"></i>
+              <p>RTL Support</p>
+            </a>
+          </li>
+          <li class="{% if 'register' in segment %} active {% endif %}">
+            <a href="/register.html" >
+              <i class="tim-icons icon-user-run"></i>
+              <p>Register</p>
+            </a>
+          </li>-->
+          <li>
+            <a href="{{ url_for('base_blueprint.logout') }}" >
+              <!--<i class="tim-icons icon-button-power"></i>-->
+              <center>
+                <p> <font size = "6">🚶‍</font><font size = "2">  Logout</font></p>
+              </center>
+            </a>
+          </li>
+          {% endif %}
+        </ul>
+
+      </div>
+    </div>

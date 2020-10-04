@@ -1,0 +1,94 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} Patients List {% endblock %}
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+<script>
+    $(document).ready(() => {
+      let filterRows = () => {
+        let name = $("#name-filter").val().toLowerCase();
+        let diagnosis = $("#diagnosis-filter").val().toLowerCase();
+        let medications = $("#medications-filter").val().toLowerCase();
+        $.find("tbody tr").forEach((tr) => {
+          let row = $(tr);
+          let filterRow = row.find('td').eq(0).text().toLowerCase().includes(name) && row.find('td').eq(1).text().toLowerCase().includes(diagnosis) && row.find('td').eq(2).text().toLowerCase().includes(medications);
+          if (filterRow) {
+            row.show();
+          } else {
+            row.hide();
+          }
+        });
+      };
+
+      $("#table-filter input").keyup(filterRows);
+    });
+</script>
+<div class="row">
+  <div class="col-md-12">
+    <div class="card ">
+      <div class="card-header">
+        <h4 class="card-title"> Patients list</h4>
+        <img class="card-title" src="https://images.vexels.com/media/users/3/144204/isolated/preview/f6d082b22c3fbdc5d2927ff1c7cd57d4-hospital-building-icon-by-vexels.png" height="100" alt="">
+        </img>
+      </div>
+      <div class="card-footer">
+        <a href="/{{route}}.html" class="btn btn-fill btn-fire"><font color="white">{{buttonText}} 🧑</font></a>
+      </div>
+      <div class="card-body">
+        <div class="table-responsive">
+          <table class="table tablesorter">
+            <thead>
+      			<tr id="table-header">
+      				<th scope="col">Name</th>
+      				<th scope="col">Ongoing treatment</th>
+      				<th scope="col">Ongoing medications</th>
+      				<th scope="col">Phone number</th>
+              <th scope="col">Email</th>
+      			</tr>
+      			<tr id="table-filter">
+      				<th scope="col">
+      					<input type="text" class="form-control" placeholder="Name" id="name-filter">
+      				</th>
+      				<th scope="col">
+      					<input type="text" class="form-control" placeholder="Diagnosis" id="diagnosis-filter">
+      				</th>
+      				<th scope="col">
+      					<input type="text" class="form-control" placeholder="Ongoing medications" id="medications-filter">
+      				</th>
+      				<th scope="col">
+      					<input type="text" class="form-control" placeholder="Phone number" disabled>
+      				</th>
+              <th scope="col">
+      					<input type="text" class="form-control" placeholder="Email" disabled>
+      				</th>
+      			</tr>
+      		</thead>
+      		<tbody>
+      		{% for cid, patient in defaultData.items() %}
+      				<tr>
+      					<td><a target="_blank" href='/patient_profile/{{cid}}'>{{ patient.name }}</a></td>
+      					<td>{{ patient.diagnosis }}</td>
+      					<td>{{ patient.medications }}</td>
+      					<td>{{ patient.phonenumber }}</td>
+                <td>{{ patient.email }}</td>
+      				</tr>
+      		{% endfor %}
+      		</tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}{% endblock javascripts %}

@@ -1,0 +1,72 @@
+{% extends "layouts/base-login-register.html" %}
+
+{% block title %} Login {% endblock %}
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+  <div class="row">
+    <div class="col-md-8">
+      <div class="card">
+        <center>
+        <form role="form" method="post" action="">
+          {{ form.hidden_tag() }}
+          <div class="card-header">
+            <center>
+            <a href="/index" class="logo-normal">
+              <img src="/static/assets/img/login.png" height="50" alt="">
+            </a>
+            </center>
+            <h3 class="title">🖐 Login 🖐</h3>
+            <h6 class="card-category">
+                {% if msg %}
+                  <span class="text-danger">{{ msg | safe }}</span>
+                {% else %}
+                <span>
+                  Login with your Dr. Mehta Group's credentials
+                </span>
+                {% endif %}
+            </h6>
+          </div>
+
+          <div class="card-body">
+
+              <div class="">
+
+                <div class="col-md-5 px-md-1">
+                  <div class="form-group">
+                    <label>Username</label>
+                    {{ form.username(class="form-control") }}
+                  </div>
+                </div>
+
+              </div>
+              <div class="">
+
+                <div class="col-md-5 px-md-1">
+                  <div class="form-group">
+                    <label>Password</label>
+                    {{ form.password(class="form-control", type="password") }}
+                  </div>
+                </div>
+
+              </div>
+
+          </div>
+          <div class="card-footer">
+            <button type="submit" name="login" class="btn btn-fill btn-primary">Login</button><br />
+            Don't have an account? <a href="{{ url_for('base_blueprint.register') }}" class="text-primary">Create</a>
+          </div>
+
+        </form>
+        </center>
+      </div>
+    </div>
+  </div>
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}{% endblock javascripts %}

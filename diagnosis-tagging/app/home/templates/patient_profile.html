@@ -1,0 +1,64 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} UI Tables {% endblock %}
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+<div class="row">
+  <div class="col-md-6">
+    <div class="card card-user">
+      <div class="card-body">
+        <center>
+          <h4 class="card-title"><b>Patient details</b></h4>
+          {% if data.gender == "male" %}
+            <font size="100">🧔</font>
+          {% else %}
+            <font size="100">👩</font>
+          {% endif %}
+          <hr style="background-color: #bfbfc5;"/>
+        </center>
+        <div class="table-responsive">
+          <table class="table tablesorter">
+            <thead>
+      			<tr id="table-header">
+      				<th scope="col">Name</th>
+              <th scope="col">{{ data.name }}</th>
+            </tr
+            <tr id="table-header">
+      				<th scope="col">diagnosis</th>
+              <th scope="col">{{ data.diagnosis }}</th>
+            </tr>
+            <tr id="table-header">
+      				<th scope="col">Medications</th>
+              <th scope="col">{{ data.medications }}</th>
+            </tr>
+            <tr id="table-header">
+      				<th scope="col">Phone Number</th>
+              <th scope="col">{{ data.phonenumber }}</th>
+            </tr>
+            <tr id="table-header">
+      				<th scope="col">Email</th>
+              <th scope="col">{{ data.email }}</th>
+            </tr>
+            <tr id="table-header">
+      				<th scope="col">Gender</th>
+              <th scope="col">{{ data.gender }}</th>
+            </tr>
+            <tr id="table-header">
+      				<th scope="col">Address</th>
+              <th scope="col">{{ data.address + ", " + data.country + ", " + data.zipcode }}</th>
+            </tr>
+            </thead>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}{% endblock javascripts %}

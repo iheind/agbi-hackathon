@@ -1,0 +1,86 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} Drugs List {% endblock %}
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+<script>
+    $(document).ready(() => {
+      let filterRows = () => {
+        let name = $("#name-filter").val().toLowerCase();
+        let treatment = $("#treatment-filter").val().toLowerCase();
+        let complications = $("#complications-filter").val().toLowerCase();
+        $.find("tbody tr").forEach((tr) => {
+          let row = $(tr);
+          let filterRow = (
+          row.find('td').eq(0).text().toLowerCase().includes(name) &&
+          row.find('td').eq(1).text().toLowerCase().includes(treatment) &&
+          row.find('td').eq(2).text().toLowerCase().includes(complications));
+          if (filterRow) {
+            row.show();
+          } else {
+            row.hide();
+          }
+        });
+      };
+      $("#table-filter input").keyup(filterRows);
+    });
+</script>
+<div class="row">
+  <div class="col-md-12">
+    <div class="card ">
+      <div class="card-header">
+        <h4 class="card-title"> Drugs list</h4>
+        <img class="card-title" src="https://images.vexels.com/media/users/3/144240/isolated/preview/ce9102820c3ec30860f5e0519c5c2c64-pills-icon-remedy-by-vexels.png" height="100" alt="">
+        </img>
+      </div>
+      <div class="card-footer">
+        <a href="/{{route}}.html" class="btn btn-fill btn-fire"><font color="white">{{buttonText}} 👉</font></a>
+      </div>
+      <div class="card-body">
+        <div class="table-responsive">
+          <table class="table tablesorter">
+            <thead>
+      			<tr id="table-header">
+      				<th scope="col">Drug</th>
+      				<th scope="col">Treatment</th>
+      				<th scope="col">Who cannot take</th>
+      			</tr>
+      			<tr id="table-filter">
+      				<th scope="col">
+      					<input type="text" class="form-control" placeholder="Drug" id="name-filter">
+      				</th>
+      				<th scope="col">
+      					<input type="text" class="form-control" placeholder="Treatment" id="treatment-filter">
+      				</th>
+      				<th scope="col">
+      					<input type="text" class="form-control" placeholder="Who cannot take" id="complications-filter">
+      				</th>
+      			</tr>
+      		</thead>
+      		<tbody>
+      		{% for cid, drug in defaultData.items() %}
+      				<tr>
+      					<td>{{ drug.name }}</td>
+      					<td>{{ drug.treatment }}</td>
+      					<td>{{ drug.complications }}</td>
+      				</tr>
+      		{% endfor %}
+      		</tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}{% endblock javascripts %}

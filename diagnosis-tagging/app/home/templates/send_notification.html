@@ -1,0 +1,197 @@
+{% extends "layouts/base.html" %}
+
+{% block title %} Send Notifications {% endblock %}
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.1.3/js/jquery.tablesorter.min.js"></script>
+  <script>
+      $(document).ready(() => {
+
+        $('#allcb').prop('checked', true);
+        $('tbody tr td input[type="checkbox"]').each(function(){
+            $(this).prop('checked', true);
+        });
+
+        $('#allcb').change(function(){
+            if($(this).prop('checked')){
+                $('tbody tr td input[type="checkbox"]').each(function(){
+                    $(this).prop('checked', true);
+                });
+            }else{
+                $('tbody tr td input[type="checkbox"]').each(function(){
+                    $(this).prop('checked', false);
+                });
+            }
+        });
+
+        let filterRows = () => {
+          let drug = $("#drug-filter").val().toLowerCase();
+          let treatment = $("#treatment-filter").val().toLowerCase();
+          let complications = $("#complications-filter").val().toLowerCase();
+          $.find("#search-body #search-row").forEach((tr) => {
+            let row = $(tr);
+            let filterRow = (
+            row.find('td').eq(0).text().toLowerCase().includes(drug) &&
+            row.find('td').eq(1).text().toLowerCase().includes(treatment) &&
+            row.find('td').eq(2).text().toLowerCase().includes(complications));
+            if (filterRow) {
+              row.show();
+            } else {
+              row.hide();
+            }
+          });
+        };
+        $("#table-filter input").keyup(filterRows);
+
+
+        let filterRowsTwo = () => {
+          let name = $("#name-filter").val().toLowerCase();
+          let treatment_two = $("#treatment-filter-two").val().toLowerCase();
+          let medications = $("#medications-filter").val().toLowerCase();
+          $.find("#search-body-two #search-row-two").forEach((tr) => {
+            let rowTwo = $(tr);
+            let filterRowTwo = (
+            rowTwo.find('td').eq(1).text().toLowerCase().includes(name) &&
+            rowTwo.find('td').eq(2).text().toLowerCase().includes(treatment_two) &&
+            rowTwo.find('td').eq(3).text().toLowerCase().includes(medications));
+            if (filterRowTwo) {
+              rowTwo.show();
+            } else {
+              rowTwo.hide();
+            }
+          });
+        };
+        $("#table-filter-two input").keyup(filterRowsTwo);
+      });
+
+  </script>
+</head>
+<div class="row">
+  <div class="col-md-6">
+    <div class="card ">
+      <div class="card-header">
+        <h4 class="card-title"> Drugs list</h4>
+      </div>
+      <div class="card-body">
+        <a href="/send_notification" class="btn btn-fill btn-fire"><font color="white">Clear list</font></a>
+        <div class="table-responsive">
+          <table class="table tablesorter">
+            <thead>
+        			<tr id="table-header">
+        				<th scope="col">Drug</th>
+        				<th scope="col">Treatment</th>
+        				<th scope="col">Complications</th>
+        			</tr>
+        			<tr id="table-filter">
+        				<th scope="col">
+        					<input type="text" class="form-control" placeholder="Drug" id="drug-filter">
+        				</th>
+        				<th scope="col">
+        					<input type="text" class="form-control" placeholder="Treatment" id="treatment-filter">
+        				</th>
+        				<th scope="col">
+        					<input type="text" class="form-control" placeholder="Complications" id="complications-filter">
+        				</th>
+        			</tr>
+      		</thead>
+      		<tbody id="search-body">
+      		{% for cid, drug in defaultData.items() %}
+      				<tr id="search-row">
+      					<td>{{ drug.name }}</td>
+      					<td>{{ drug.treatment }}</td>
+      					<td>{{ drug.complications }}</td>
+                <td>
+                    <a href="/send_notification_list/{{drug.name}}_{{drug.treatment}}_{{drug.complications}}" class="btn btn-fill btn-fire"><font color="white">Generate</font></a>
+                </td>
+      				</tr>
+      		{% endfor %}
+      		</tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="card ">
+      <div class="card-header">
+        <h4 class="card-title"> Patients list</h4>
+        {% if data %}
+          <center
+            <h2>
+              💊💊 <b>{{ data.name }}</b> 💊💊
+            </h2>
+          </center>
+        {% endif %}
+      </div>
+      <div class="card-body">
+        <form class="" action="/send_notification_sms" method="post">
+          <input type="submit" name="submit" value="Fire notification ❤️‍🔥" class="btn btn-fill btn-fire"/>
+        <div class="table-responsive">
+          <table class="table tablesorter">
+            <thead>
+        			<tr id="table-header">
+                <th scope="col">Select</th>
+        				<th scope="col">Name</th>
+        				<th scope="col">Treatment</th>
+        				<th scope="col">Medications</th>
+        				<th scope="col">Age</th>
+        			</tr>
+        			<tr id="table-filter-two">
+                <th scope="col">
+        					<input type="checkbox" id="allcb" name="allcb" placeholder="Select">
+        				</th>
+        				<th scope="col">
+        					<input type="text" class="form-control" placeholder="Name" id="name-filter">
+        				</th>
+        				<th scope="col">
+        					<input type="text" class="form-control" placeholder="Treatment" id="treatment-filter-two">
+        				</th>
+        				<th scope="col">
+        					<input type="text" class="form-control" placeholder="Medications" id="medications-filter">
+        				</th>
+        				<th scope="col">
+        					<input type="text" class="form-control" placeholder="Age" disabled>
+        				</th>
+        			</tr>
+      		  </thead>
+      		<tbody id="search-body-two">
+          {% set x = [] %}
+          {% set email = [] %}
+      		{% for cid, patient in patientData.items() %}
+            {% for i in patient.diagnosis.split(', ') %}
+              {% if i.strip() in data['treatment'] and loop.first %}
+        				<tr id="search-row-two">
+                  <td><input type="checkbox" id="cb1" name="cb1"/></td>
+        					<td><a target="_blank" href='/patient_profile/{{cid}}'>{{ patient.name }}</a></td>
+        					<td>{{ patient.diagnosis }}</td>
+        					<td>{{ patient.medications }}</td>
+        					<td>{{ patient.age }}</td>
+                  <div style="display:none">{{ x.append(patient.phonenumber) }}</div>
+                  <div style="display:none">{{ email.append(patient.email) }}</div>
+        				</tr>
+              {% endif %}
+            {% endfor %}
+      		{% endfor %}
+      		</tbody>
+          </table>
+        </div>
+        {% set final = x %}
+        {% set finalemail = email %}
+        <input type="hidden" name="sms" value="{{ ",".join(final) }}"/>
+        <input type="hidden" name="email" value="{{ ",".join(finalemail) }}"/>
+        <input type="hidden" name="drug" value="{{ data.name }}"/>
+        </form>
+      </div>
+  </div>
+</div>
+
+
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}{% endblock javascripts %}
