@@ -17,9 +17,9 @@
 * Mehta's PatientsApp
 
 ### Demo URL 📱:
-* Mehta's Digital Marketing [Webapp](https://agbihackathon.herokuapp.com/)
-* Mehta's OCRApp [apk](https://github.com/Sai-Adarsh/agbi-hackathon/raw/main/ocrapp/build/mehtaocrapp.apk) • [Snack](https://expo.io/@saiadarsh99/mehta-ocr)
-* Mehta's PatientsApp [apk](https://github.com/Sai-Adarsh/agbi-hackathon/raw/main/patients-sms-app/android/app/patients-sms-app.apk)
+* Mehta's Digital Marketing: [webapp](https://agbihackathon.herokuapp.com/) 💻
+* Mehta's OCRApp [apk](https://github.com/Sai-Adarsh/agbi-hackathon/raw/main/ocrapp/build/mehtaocrapp.apk) • [snack](https://expo.io/@saiadarsh99/mehta-ocr) 📱
+* Mehta's PatientsApp [apk](https://github.com/Sai-Adarsh/agbi-hackathon/raw/main/patients-sms-app/android/app/patients-sms-app.apk) 📱
 
 ### Architecture 😎: 
 
