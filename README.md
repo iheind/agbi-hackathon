@@ -5,9 +5,10 @@
 * Currently, hospitals rely on mass marketing campaigns to inform patients of a relevant treatment or drug available to further improve their health. Build applications that can help hospitals, patients, pharmaceutical companies, and health R&D companies with more efficient and effective ways of communication by hospitals for better health outcomes and targeted communication to prime patient groups for a new treatment/drug leveraging the power of data analytics. Your solution needs to manage the database of patient records and discharge summaries to identify patients who are good candidates for newly launched medicines, treatments etc.
 
 ### Our Solution 👨‍💻:
-* <img src="https://github.com/Sai-Adarsh/agbi-hackathon/blob/main/diagnosis-tagging/app/base/static/assets/img/icon.png" width="30%">
 * Mehta's Digital Marketing [Webapp](https://github.com/Sai-Adarsh/agbi-hackathon/tree/main/diagnosis-tagging)
+<img src="https://github.com/Sai-Adarsh/agbi-hackathon/blob/main/diagnosis-tagging/app/base/static/assets/img/icon.png" width="30%">
 * Mehta's OCRApp
+<img src="https://github.com/Sai-Adarsh/agbi-hackathon/blob/main/ocrapp/assets/icon.png" width="10%">
 * Mehta's PatientsApp
 
 ### Demo URL 📱:
