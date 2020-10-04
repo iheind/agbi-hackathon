@@ -9,6 +9,13 @@
 * ### Diagnosis Tagging for Digital Marketing:
 * Currently, hospitals rely on mass marketing campaigns to inform patients of a relevant treatment or drug available to further improve their health. Build applications that can help hospitals, patients, pharmaceutical companies, and health R&D companies with more efficient and effective ways of communication by hospitals for better health outcomes and targeted communication to prime patient groups for a new treatment/drug leveraging the power of data analytics. Your solution needs to manage the database of patient records and discharge summaries to identify patients who are good candidates for newly launched medicines, treatments etc.
 
+### Objectives ✔️:
+* To convert decades of handwritten hospital documents and reports into text and store it in a database for analytics.
+* To visualize the data and derive insights out of them for better health outcomes.
+* To have the database of patients and drugs at one place.
+* To apply filter on those data and implement targeted marketing of new drugs and treatments.
+* To establish a perennial digital bridge between patients and hospital
+
 ### Our Solution 👨‍💻:
 <img src="https://github.com/Sai-Adarsh/agbi-hackathon/blob/main/diagnosis-tagging/app/base/static/assets/img/icon.png" width="30%">
 
@@ -23,7 +30,12 @@
 
 ### Architecture 😎: 
 
+<img src="https://github.com/Sai-Adarsh/agbi-hackathon/blob/main/diagnosis-tagging/architecture.png" width="90%">
+<img src="https://github.com/Sai-Adarsh/agbi-hackathon/blob/main/diagnosis-tagging/architecture(1).png" width="90%">
+
 ### Tech Stacks ⚛️:
+
+<img src="https://github.com/Sai-Adarsh/agbi-hackathon/blob/main/diagnosis-tagging/stack.png" width="90%">
 
 ### Installation 📦:
 * ## Digital Marketing Webapp
