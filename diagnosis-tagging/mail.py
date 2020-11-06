@@ -5,9 +5,9 @@ from email.mime.multipart import MIMEMultipart
 import csv
 import time
 
-sender_email = "saiadarshsivakumar@gmail.com"
+sender_email = ""
 # receiver_email = "receiver_mail@gmail.com"
-password = "thalathala57"
+password = ""
 
 message = MIMEMultipart("alternative")
 message["Subject"] = "Your Mail Subject"

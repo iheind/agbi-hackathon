@@ -31,15 +31,15 @@ pyrebase.pyrebase.quote = noquote
 auth=db=user=firebase=None
 # FIREBASE CONNECTION CONFIGURATION
 config = {
-    "apiKey": "AIzaSyA_rPzl1D8YouEsSJ1AjQwElFqH_mxOAFI",
-    "authDomain": "realtime-4a7de.firebaseapp.com",
-    "databaseURL": "https://realtime-4a7de.firebaseio.com",
-    "projectId": "realtime-4a7de",
-    "storageBucket": "realtime-4a7de.appspot.com",
-    "messagingSenderId": "624733681109",
-    "appId": "1:624733681109:web:e26d8881c0194973d6b95c",
-    "measurementId": "G-01BBL7B415",
-    "serviceAccount": "credentials/serviceAccountCredentials.json"
+    "apiKey": "",
+    "authDomain": "",
+    "databaseURL": "",
+    "projectId": "",
+    "storageBucket": "",
+    "messagingSenderId": "=",
+    "appId": "",
+    "measurementId": "",
+    "serviceAccount": ""
 }
 # INITIALISE FIREBASE CONNECTION
 firebase = pyrebase.initialize_app(config)

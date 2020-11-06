@@ -34,14 +34,14 @@ const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
 
 var firebaseConfig = {
-  apiKey: "AIzaSyD4ibuxkZxlOfCtJvcSHy4HowiTxcbSZKg",
-  authDomain: "bubo-3b1fb.firebaseapp.com",
-  databaseURL: "https://bubo-3b1fb.firebaseio.com",
-  projectId: "bubo-3b1fb",
-  storageBucket: "bubo-3b1fb.appspot.com",
-  messagingSenderId: "177543367652",
-  appId: "1:177543367652:web:7e948c148c61ef75a295f1",
-  measurementId: "G-VJQV2D8X5T"
+  apiKey: "",
+  authDomain: "",
+  databaseURL: "",
+  projectId: "",
+  storageBucket: "",
+  messagingSenderId: "",
+  appId: "",
+  measurementId: ""
 };
 
 if (!firebase.apps.length) {

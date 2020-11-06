@@ -7,9 +7,9 @@ import time
 
 
 def bulkMailer(reader, medicine):
-    sender_email = "saiadarshsivakumar@gmail.com"
+    sender_email = ""
     # receiver_email = "receiver_mail@gmail.com"
-    password = "thalathala57"
+    password = ""
     message = MIMEMultipart("alternative")
     message["Subject"] = "💊 Checkout the new drug on market"
     message["From"] = sender_email
